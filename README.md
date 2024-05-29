@@ -82,14 +82,6 @@ Concentrez-vous sur la vue bureau pour le moment, en assurant la lisibilité sur
 
 Veuillez vous assurer que votre code est bien documenté. Vous pouvez utiliser JSDoc ou PropTypes pour la documentation. Assurez-vous de mettre à jour ce README avec toute nouvelle information ou modification.
 
-## Licence
-
-Ce projet est sous licence MIT. Voir le fichier LICENSE pour plus de détails.
-
-## Contact
-
-Si vous avez des questions ou besoin de clarifications supplémentaires, n'hésitez pas à contacter le lead developer, Antoine, ou le product owner, Charles.
-
 ---
 
 Bon développement !
