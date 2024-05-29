@@ -1,0 +1,21 @@
+header {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0 1rem 2rem;
+    background-color: black;
+    color: white;
+    gap: 2rem;
+
+    .navbar {
+        display: flex;
+        justify-content: space-evenly;
+        flex-grow: 1;
+
+        & > a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            font-size: 24px;
+        }
+    }
+}

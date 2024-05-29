@@ -1,0 +1,10 @@
+export { default as Apple } from "./Apple.jsx";
+export { default as Bicycle } from "./Bicycle.jsx";
+export { default as Cheeseburger } from "./Cheeseburger.jsx";
+export { default as Chicken } from "./Chicken.jsx";
+export { default as Energy } from "./Energy.jsx";
+export { default as Favicon } from "./Favicon.jsx";
+export { default as Logo } from "./Logo.jsx";
+export { default as Swim } from "./Swim.jsx";
+export { default as Weight } from "./Weight.jsx";
+export { default as Yoga } from "./Yoga.jsx";

@@ -1,0 +1,38 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: black;
+    align-items: center;
+    color: white;
+
+    &__icons {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        top: 50%;
+        transform: translateY(-50%);
+        gap: 2rem;
+        &__icon {
+            width: 64px;
+            height: 64px;
+        }
+    }
+    & .rights {
+        display: flex;
+        align-items: center;
+        margin-top: auto;
+        margin-bottom: 2rem;
+        bottom: 2rem;
+        &__copyrights {
+            font-size: 12px;
+            white-space: nowrap;
+            writing-mode: vertical-lr;
+            -webkit-writing-mode: vertical-lr;
+            -ms-writing-mode: vertical-lr;
+            transform: rotate(180deg);
+        }
+
+    }
+}

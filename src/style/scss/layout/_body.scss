@@ -1,0 +1,51 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+html {
+    height: auto;
+    min-height: 100%;
+    width: auto;
+}
+
+body {
+    min-width: 1024px;
+    min-height: 780px;
+    height: 100vh;
+}
+
+#root {      
+    display: grid;
+    grid-template-areas: "header header"
+                         "sidebar main";   
+    grid-template-columns: 117px auto;
+    grid-template-rows: 91px auto;       
+    font-family: "Roboto";
+    box-sizing: border-box;
+    height: 100%;
+}
+
+header {
+    grid-area: header;
+    height: 91px;
+    width: 100%;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    height: 100%;
+    width: 117px;
+}
+
+main {
+    grid-area: main;
+    padding: 3rem;
+    max-height: 100%;
+    width: auto;
+    overflow: scroll;
+}
+
+.loading {
+    text-align: center;
+}

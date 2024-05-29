@@ -1,0 +1,25 @@
+.line-chart {
+    position: relative;
+}
+
+.lineWrapper {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.custom-tooltip-linechart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: black;
+    background-color: white;
+    padding: 1rem;
+
+}
+
+.recharts-crosshair-line {
+    fill: red;
+}

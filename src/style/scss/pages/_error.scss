@@ -1,0 +1,9 @@
+.error {
+    text-align: center;
+    font-size: 24px;
+
+    & h1 {
+        font-size: 150px;
+        color: red;
+    }
+}
