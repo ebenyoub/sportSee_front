@@ -1,7 +1,5 @@
 # SportSee - Page Profil Utilisateur
 
-![Logo de SportSee](lien-vers-logo-sportsee.png)
-
 ## Description
 
 SportSee est une startup en pleine croissance dédiée au coaching sportif. Dans le cadre de notre expansion, nous lançons une nouvelle version de la page profil utilisateur. Cette page permet aux utilisateurs de suivre le nombre de sessions réalisées ainsi que le nombre de calories brûlées.
