@@ -39,6 +39,7 @@ const Rectangle = styled.div`
     grid-area: rectangle;
     background-color: #FBFBFB;
     border-radius: 10px;
+    aspect-ratio: 813/313;
 `;
 
 const Squares = styled.div`
@@ -46,6 +47,7 @@ const Squares = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    aspect-ratio: 813/256;
 `;
 
 const CardContainer = styled.div`
