@@ -45,7 +45,7 @@ const BarGraph = memo(({ id }) => {
 
     return (
         <ResponsiveContainer width="100%" height="100%" ref={container}>
-            <BarChart data={data.data.sessions.map((session, index) => ({ ...session, index: index + 1 }))}
+            <BarChart data={data.sessions.map((session, index) => ({ ...session, index: index + 1 }))}
                 barSize={7}
                 barGap={7}
             >

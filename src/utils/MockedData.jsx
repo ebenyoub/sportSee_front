@@ -1,4 +1,4 @@
-export const USER_MAIN_DATA = [
+const USER_MAIN_DATA = [
     {
       id: 12,
       userInfos: {
@@ -31,7 +31,7 @@ export const USER_MAIN_DATA = [
     },
   ];
   
-  export const USER_ACTIVITY = [
+  const USER_ACTIVITY = [
     {
       userId: 12,
       sessions: [
@@ -114,7 +114,7 @@ export const USER_MAIN_DATA = [
     },
   ];
   
-  export const USER_AVERAGE_SESSIONS = [
+  const USER_AVERAGE_SESSIONS = [
     {
       userId: 12,
       sessions: [
@@ -183,7 +183,7 @@ export const USER_MAIN_DATA = [
     },
   ];
   
-  export const USER_PERFORMANCE = [
+  const USER_PERFORMANCE = [
     {
       userId: 12,
       kind: {
@@ -259,3 +259,12 @@ export const USER_MAIN_DATA = [
       ],
     },
   ];
+
+  const mockedData = {
+    user: USER_MAIN_DATA,
+    activity: USER_ACTIVITY,
+    sessions: USER_AVERAGE_SESSIONS,
+    performance: USER_PERFORMANCE
+  }
+
+  export default mockedData;

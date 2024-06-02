@@ -30,7 +30,7 @@ const RadarGraph = memo(({ id }) => {
         return <span className='loading'>Loading...</span>
     }
 
-    const { data } = performances.data;
+    const { data } = performances;
 
     const kind = {
         1: "Cardio",

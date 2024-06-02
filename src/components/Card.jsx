@@ -9,8 +9,7 @@ const CardContainer = styled.div`
     justify-content: center;
     background-color: #fbfbfbb6;
     border-radius: 10px;
-    width: auto;
-    height: calc(100% / 4);
+    height: 126px;
     display: flex;
     padding: 0 2rem;
 `

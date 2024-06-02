@@ -76,8 +76,8 @@ const LineGraph = memo(({ id }) => {
             onMouseLeave={() => setLineActivePoint(null)}
         >
             <ResponsiveContainer className="line-chart" width={"100%"} height={"100%"} ref={containerRef}>
-                {data.data.sessions ? (
-                    <LineChart data={data.data.sessions}
+                {data?.sessions ? (
+                    <LineChart data={data.sessions}
                         fill="#FF0000"
                         margin={{ left: 0, right: 0 }}
                         onMouseMove={handleActivePoint}
@@ -115,7 +115,7 @@ const LineGraph = memo(({ id }) => {
                     <span>Loading...</span>
                 )}
             </ResponsiveContainer>
-            {data.data.sessions && (
+            {data?.sessions && (
                 <TickLabel className="TickLabel" size={12}>
                     {days.map((day, index) => (
                         <span key={index}>{day}</span>

@@ -24,6 +24,15 @@ const GraphContainer = styled.div`
     height: 603px;
     width: 1113px;
     gap: 2rem;
+
+    @media (max-width: 1300px) {
+        grid-template-areas: "rectangle"
+                             "square"
+                             "card";
+        grid-template-columns: 1fr;
+        width: 800px;
+        height: 100%;
+    }
 `
 
 const Rectangle = styled.div`
@@ -44,6 +53,12 @@ const CardContainer = styled.div`
     flex-direction: column;
     grid-area: card;
     gap: 2rem;
+
+    @media (max-width: 1300px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;        
+    }
 `;
 
 /**
@@ -66,7 +81,7 @@ const Dashboard = memo(() => {
         return <span className="loading">Loading...</span>
     }
 
-    const { score, todayScore, keyData } = data.data
+    const { score, todayScore, keyData } = data
 
     const cardData = [
         { name: "Calories", value: keyData.calorieCount, icon: Apple, unit: "kCal" },
@@ -77,7 +92,7 @@ const Dashboard = memo(() => {
 
     return (
         <main>
-            <Welcome user={data.data.userInfos.firstName} />
+            <Welcome user={data.userInfos.firstName} />
             <GraphContainer>
                 <Rectangle>
                     <BarGraph id={id} />
