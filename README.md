@@ -21,23 +21,23 @@ Pour ce sprint, notre objectif est d'intégrer les User Stories de la section TO
 
 1. Clonez le dépôt :
    ```bash
-   git clone https://github.com/votrenomutilisateur/sportsee-profile.git
-   cd sportsee-profile
+   git clone https://github.com/ebenyoub/sportSee_front.git
+   cd sportSee_front
    ```
 
 2. Installez les dépendances :
    ```bash
-   npm install
+   yarn
    ```
 
 3. Démarrez le serveur de développement :
    ```bash
-   npm start
+   yarn dev
    ```
 
 ### Serveur Backend
 
-Un serveur backend est fourni pour récupérer des données d'exemple. Vous pouvez trouver le serveur backend [ici](lien-vers-le-depot-backend). Suivez les instructions dans le dépôt backend pour le configurer et le démarrer.
+Un serveur backend est fourni pour récupérer des données d'exemple. Vous pouvez trouver le serveur backend [ici](https://github.com/ebenyoub/sportSee_back.git). Suivez les instructions dans le dépôt backend pour le configurer et le démarrer.
 
 ### Intégration de l'API
 
