@@ -1,7 +1,7 @@
 import ReactDOM from 'react-dom/client'
 import "./style/style.css"
 import Dashboard from '/src/pages/Dashboard'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { HashRouter as Router, Routes, Route } from "react-router-dom"
 import Header from './components/Header'
 import SidebarNav from './components/SidebarNav'
 import RedirectToUserId from './utils/RedirectToUserId'
