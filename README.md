@@ -1,87 +1,107 @@
-# SportSee - Page Profil Utilisateur
+# SportSee - Tableau de bord utilisateur
 
-## Description
+SportSee est un dashboard React realise dans le cadre d'un projet OpenClassrooms. L'objectif etait d'integrer une page profil permettant a un utilisateur de suivre son activite sportive a travers plusieurs visualisations de donnees.
 
-SportSee est une startup en pleine croissance dédiée au coaching sportif. Dans le cadre de notre expansion, nous lançons une nouvelle version de la page profil utilisateur. Cette page permet aux utilisateurs de suivre le nombre de sessions réalisées ainsi que le nombre de calories brûlées.
+## Ce que le projet montre
 
-## Aperçu du Projet
+- Integration d'une interface dashboard en React.
+- Routing avec React Router.
+- Visualisation de donnees avec Recharts.
+- Recuperation de donnees depuis une API ou depuis des mocks locaux.
+- Decoupage en composants reutilisables : header, sidebar, cartes nutritionnelles, graphiques.
+- Gestion des etats loading et erreur.
 
-Pour ce sprint, notre objectif est d'intégrer les User Stories de la section TODO du tableau kanban. La page profil utilisateur sera développée en utilisant React et inclura des graphiques affichant l'activité sportive de l'utilisateur.
+## Fonctionnalites
 
-## Technologies
+- Selection rapide d'un profil utilisateur.
+- Affichage du prenom de l'utilisateur.
+- Graphique d'activite quotidienne : poids et calories.
+- Graphique des sessions moyennes.
+- Graphique radar des performances.
+- Graphique circulaire de progression de l'objectif.
+- Cartes de synthese : calories, proteines, glucides, lipides.
 
-- **React** : Pour la création de l'interface utilisateur.
-- **D3 ou Recharts** : Pour créer des graphiques affichant les données d'activité utilisateur. Recharts est recommandé pour sa facilité d'utilisation.
-- **Node.js** : Pour le serveur backend fournissant des données d'exemple.
-- **Fetch ou Axios** : Pour effectuer les appels HTTP afin de récupérer les données du backend.
+## Stack
 
-## Détails Techniques
+- React 18
+- Vite
+- React Router
+- Recharts
+- Axios
+- Styled Components
+- Sass
 
-### Installation
+## Installation
 
-1. Clonez le dépôt :
-   ```bash
-   git clone https://github.com/ebenyoub/sportSee_front.git
-   cd sportSee_front
-   ```
-
-2. Installez les dépendances :
-   ```bash
-   yarn
-   ```
-
-3. Démarrez le serveur de développement :
-   ```bash
-   yarn dev
-   ```
-
-### Serveur Backend
-
-Un serveur backend est fourni pour récupérer des données d'exemple. Vous pouvez trouver le serveur backend [ici](https://github.com/ebenyoub/sportSee_back.git). Suivez les instructions dans le dépôt backend pour le configurer et le démarrer.
-
-### Intégration de l'API
-
-- Les appels de données doivent être effectués en dehors des composants React en utilisant un service séparé.
-- Mockez initialement les données de l'API pour s'assurer que le frontend fonctionne.
-- Une fois la configuration des données mockées terminée, intégrez l'API.
-- Standardisez le format des données provenant de l'API avant de les utiliser dans l'application.
-
-### Intégration CSS
-
-Concentrez-vous sur la vue bureau pour le moment, en assurant la lisibilité sur des écrans d'au moins 1024x780 pixels. Les versions mobile et tablette seront abordées dans les futurs sprints.
-
-## Structure du Projet
-
-```
-/sportsee-profile
-├── README.md
-├── index.html
-├── package.json
-├── public
-│   └── vite.svg
-├── src
-│   ├── assets
-│   ├── components
-│   ├── iconComponents
-│   ├── main.jsx
-│   ├── pages
-│   ├── style
-│   └── utils
-├── vite.config.js
-└── yarn.lock
+```bash
+npm install
 ```
 
-## Utilisation
+## Lancement avec les donnees mockees
 
-1. **Démarrer le Développement** : Commencez par mocker les données du backend.
-2. **Appels API** : Implémentez le service pour les appels API en utilisant Fetch ou Axios.
-3. **Intégration des Graphiques** : Utilisez D3 ou Recharts pour créer les graphiques d'activité.
-4. **Stylisation** : Appliquez le CSS pour assurer un design responsive pour bureau.
+Le projet est configuré par defaut pour fonctionner avec les donnees mockees. Cela permet de tester l'interface sans lancer le backend.
 
-## Contribution
+```bash
+npm run dev
+```
 
-Veuillez vous assurer que votre code est bien documenté. Vous pouvez utiliser JSDoc ou PropTypes pour la documentation. Assurez-vous de mettre à jour ce README avec toute nouvelle information ou modification.
+Puis ouvrir l'URL indiquee par Vite.
 
----
+## Lancement avec le backend
 
-Bon développement !
+Créer un fichier `.env` a partir de `.env.example` :
+
+```bash
+cp .env.example .env
+```
+
+Puis configurer :
+
+```env
+VITE_API_URL=http://localhost:3000/
+VITE_USE_MOCKED_DATA=false
+```
+
+Le backend attendu est disponible ici :
+
+```txt
+https://github.com/ebenyoub/sportSee_back
+```
+
+## Scripts
+
+```bash
+npm run dev
+npm run build
+npm run lint
+npm run preview
+```
+
+## Structure
+
+```txt
+src/
+├── components/
+│   ├── recharts/
+│   ├── Card.jsx
+│   ├── Header.jsx
+│   ├── SidebarNav.jsx
+│   └── Welcome.jsx
+├── iconComponents/
+├── pages/
+├── style/
+└── utils/
+```
+
+## Choix techniques
+
+Les graphiques sont separes par type afin de garder chaque visualisation lisible. Le hook `useFetch` centralise la recuperation des donnees et permet de basculer entre API reelle et donnees mockees via les variables d'environnement.
+
+Ce projet est volontairement centre sur la vue desktop, comme demande dans le brief initial. La version mobile pourrait etre traitee dans une evolution future.
+
+## Ameliorations possibles
+
+- Ajouter des tests sur les composants graphiques.
+- Ajouter une meilleure experience mobile.
+- Migrer vers TypeScript.
+- Mettre a jour Recharts vers la version majeure la plus recente.

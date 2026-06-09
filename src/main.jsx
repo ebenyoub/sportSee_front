@@ -10,7 +10,7 @@ import Profile from './pages/Profile'
 
 export const App = () => {
   return (
-    <Router>
+    <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
         <Header />
         <SidebarNav />
         <Routes>
