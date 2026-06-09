@@ -8,7 +8,7 @@ const PieWrapper = styled.div`
     position: relative;
     display: flex;
     height: 100%;
-    weight: 100%;
+    width: 100%;
     background-color: #FBFBFB;
     border-radius: 10px;
 `
@@ -72,7 +72,7 @@ const PieGraph = memo(({ score }) => {
         window.addEventListener('resize', handleResize);
 
         return () => window.removeEventListener('resize', handleResize);
-    }, [containerSize]);
+    }, []);
 
     return (
         <PieWrapper ref={pieRef}>
